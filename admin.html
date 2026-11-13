@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src data:; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta name="color-scheme" content="light">
+<title>PrintZing Admin</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#fff;color:#0A2658;padding:0 0 90px}
+header{background:#0A2658;color:#fff;padding:16px 18px;font-weight:800;font-size:1.2rem;border-bottom:5px solid #D60C7E}
+main{max-width:720px;margin:0 auto;padding:16px}
+.box{border:2px solid #E3E8F1;border-radius:18px;padding:14px;margin-bottom:14px}
+h2{margin:0 0 10px;font-size:1.05rem}
+label{display:block;font-weight:700;font-size:.85rem;margin:8px 0 3px}
+input[type=text],input[type=password],input[type=number]{width:100%;padding:11px 12px;border:2px solid #E3E8F1;border-radius:12px;font:inherit;color:#0A2658}
+button{font:inherit;font-weight:700;border-radius:999px;border:2px solid #0A2658;background:#fff;color:#0A2658;padding:9px 16px;cursor:pointer}
+button.p{background:#D60C7E;border-color:#D60C7E;color:#fff}button.n{background:#0A2658;color:#fff}
+.row{display:grid;grid-template-columns:84px 1fr;gap:10px;padding:12px 0;border-top:1px solid #E3E8F1}
+.row:first-child{border-top:0}
+.th{width:84px;height:84px;object-fit:contain;border:2px solid #E3E8F1;border-radius:12px;background:#fff}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ck{display:flex;gap:14px;align-items:center;margin:8px 0;font-size:.9rem;flex-wrap:wrap}.ck label{display:flex;gap:6px;align-items:center;margin:0}
+.ac{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.ac button{padding:6px 12px;font-size:.85rem}.dl{color:#D60C7E;border-color:#D60C7E}
+#bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid #E3E8F1;padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+#msg{font-size:.9rem;font-weight:600;min-height:1.2em;text-align:center;width:100%}.er{color:#D60C7E}.ok{color:#0a7a3d}
+small{color:#52618A}
+</style></head><body>
+<header>PrintZing Admin Panel</header>
+<main>
+<div class="box"><h2>GitHub se connect</h2>
+<small>Ye details sirf is phone/computer ke browser mein rehti hain.</small>
+<label for="o">GitHub username</label><input type="text" id="o" autocomplete="off">
+<label for="r">Repository ka naam</label><input type="text" id="r" autocomplete="off">
+<label for="b">Branch (aam taur par main)</label><input type="text" id="b" value="main" autocomplete="off">
+<label for="t">Access token</label><input type="password" id="t" autocomplete="off">
+<div class="ac"><button class="n" id="ld" type="button">Connect &amp; products laayein</button><button class="dl" id="fg" type="button">Token hatayein</button></div></div>
+<div class="box"><h2>Products</h2><div class="ac" style="align-items:center;margin-bottom:10px"><b>Sabhi par offer:</b><input type="number" id="bp" min="1" max="90" placeholder="% off" style="width:90px"><button class="n" id="bon" type="button">Lagao</button><button class="dl" id="bof" type="button">Saare offer band</button></div>
+<div id="list"><small>Pehle upar connect karein.</small></div>
+<div class="ac"><button class="p" id="ad" type="button">+ Naya product</button></div></div>
+</main>
+<div id="bar"><div id="msg" role="status"></div><button class="p" id="sv" type="button">Website par save karein</button></div>
+<script src="admin.js" defer></script></body></html>
